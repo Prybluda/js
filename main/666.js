@@ -114,20 +114,79 @@
 
 //-----------------------------------------------------------
 
-function findLongestWord(string) {
-  // Change code below this line
-const words = string.split(" ");
-  let longWord = "";
-  for (let i = 0; i < words.length; i += 1){
-    if (words[i].length > longWord.length){
-      longWord = words[i];
-    }
-  }
-return longWord;
+// function findLongestWord(string) {
+//   // Change code below this line
+// const words = string.split(" ");
+//   let longWord = "";
+//   for (let i = 0; i < words.length; i += 1){
+//     if (words[i].length > longWord.length){
+//       longWord = words[i];
+//     }
+//   }
+// return longWord;
 
+//   // Change code above this line
+// }
+
+// console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+// console.log(findLongestWord("Google do a roll"));
+// console.log(findLongestWord("May the force be with you"));
+
+//------------------------------------------------------------
+
+//PUSh
+
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line
+// for (let i = min; i <= max; i += 1){
+//   numbers.push(i);
+// }
+//   // Change code above this line
+//   return numbers;
+// }
+// console.log(createArrayOfNumbers(1, 3));
+// console.log(createArrayOfNumbers(14, 17));
+// console.log(createArrayOfNumbers(29, 34));
+
+//----------------------------------------------------------
+
+//INCLUDES
+
+// function getCommonElements(array1, array2) {
+//   // Change code below this line
+// const newArray =[];
+//   for (let i = 0; i < array1.length; i +=1){
+//     const checkedArray = array1[i];
+//     console.log(checkedArray);
+
+//     if (array2.includes(checkedArray)){
+//     newArray.push(checkedArray);
+//   }
+
+// }
+// return newArray;
+//  // Change code above this line
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+
+//-------------------------------------------------------------
+
+function includes(array, value) {
+  // Change code below this line
+for (let i = 0; i < array.length; i += 1){
+  if (array[i] === value){
+    return true;
+  }
+  }
+  return false;
   // Change code above this line
 }
 
-console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
-console.log(findLongestWord("Google do a roll"));
-console.log(findLongestWord("May the force be with you"));
+console.log(includes([1, 2, 3, 4, 5], 3));
+console.log(includes([1, 2, 3, 4, 5], 17));
+console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
+console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
