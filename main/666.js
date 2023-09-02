@@ -192,20 +192,174 @@
 // console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
 
 
-function countProps(object) {
-  let propCount = 0;
-  // Change code below this line
+// function countProps(object) {
+//   let propCount = 0;
+//   // Change code below this line
   
-for(const key in object){
-  console.log(key);
-  if (object.hasOwnProperty(key)){
-      propCount += 1;
-  }
-}
-  // Change code above this line
-  return propCount;
+// for(const key in object){
+//   console.log(key);
+//   if (object.hasOwnProperty(key)){
+//       propCount += 1;
+//   }
+// }
+//   // Change code above this line
+//   return propCount;
 
-}
-console.log(countProps({ name: "Mango", age: 2 }));
-console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
-console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500, sokfgk: 666, jnjnjn: 999 }));
+// }
+// console.log(countProps({ name: "Mango", age: 2 }));
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500, sokfgk: 666, jnjnjn: 999 }));
+
+// Альтернатива через Object.keys
+
+// function countProps(object) {
+//   // Change code below this line
+//   const propCount = [];
+//   const keys = Object.keys(object);
+//   for (const key of keys) {
+//   propCount.push(object[key]);
+//   }
+
+//   return propCount.length;
+//   // Change code above this line
+// }
+
+// ------------------------------------------------------------------------------------
+
+// OBJECT.KeYS
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+// const keys = Object.keys(apartment);
+// for(const key of keys){
+//   console.log(key);
+//   values.push([key]);
+// }
+
+// console.log([key]);
+
+// ------------------------------------------------------------------------------------
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+// for (const key in salaries){
+//   if (salaries.hasOwnProperty(key)){
+//     totalSalary += salaries[key];
+//   }
+// }
+//   // Change code above this line
+//   return totalSalary;
+// }
+
+// console.log(countTotalSalary({}));
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+
+// ------------------------------------------------------------------------------------
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+// const arr =[];
+//   for( const product of products){
+//   if (product[propName]){
+//      arr.push(product[propName]);
+    
+//   }  
+//   }
+// return arr;
+
+//   // Change code above this line
+// }
+// console.log(getAllPropValues("name"));
+// console.log(getAllPropValues("quantity"));
+// console.log(getAllPropValues("price"));
+// console.log(getAllPropValues("category"));
+
+//------------------------------------------------------------------------------------
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Change code below this line
+//   let totalPrice = 0;
+// for( const product of products){
+ 
+//   if (product.name === productName){
+//     totalPrice = product.price * product.quantity;
+//   }
+
+// }
+// return totalPrice;
+
+//   // Change code above this line
+// }
+// console.log(calculateTotalPrice("Blaster"));
+// console.log(calculateTotalPrice("Radar"));
+// console.log(calculateTotalPrice("Droid"));
+// console.log(calculateTotalPrice("Grip"));
+// console.log(calculateTotalPrice("Scanner"));
+
+// ------------------------------------------------------------------------------
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  
+  addPotion(newPotion) {
+    for (let potion of this.potions){
+      if (potion.name === newPotion.name){
+      return `Error! Potion ${newPotion.name} is already in your inventory!`;  
+      }
+    }
+        this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    const potionIndex = this.potions.indexOf(potionName);
+
+    if (potionIndex === -1) {
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+
+  updatePotionName(oldName, newName) {
+    for (let i = 0; i < this.potions.length; i += 1) {
+      if (this.potions.name[i] === oldName){
+        this.potions.name[i] === newName;
+        break;
+         return `Potion ${oldName} is not in inventory!`;
+      }
+    }
+    this.potions.splice(potionIndex, 1, newName);
+      },
+
+   
+  },
+  // Change code above this line
+};
