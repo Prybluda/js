@@ -319,47 +319,268 @@
 
 // ------------------------------------------------------------------------------
 
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ],
-  // Change code below this line
-  getPotions() {
-    return this.potions;
-  },
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
   
-  addPotion(newPotion) {
-    for (let potion of this.potions){
-      if (potion.name === newPotion.name){
-      return `Error! Potion ${newPotion.name} is already in your inventory!`;  
-      }
-    }
-        this.potions.push(newPotion);
-  },
-  removePotion(potionName) {
-    const potionIndex = this.potions.indexOf(potionName);
+//   addPotion(newPotion) {
+//     for (let potion of this.potions){
+//       if (potion.name === newPotion.name){
+//       return `Error! Potion ${newPotion.name} is already in your inventory!`;  
+//       }
+//     }
+//         this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     const potionIndex = this.potions.indexOf(potionName);
 
-    if (potionIndex === -1) {
-      return `Potion ${potionName} is not in inventory!`;
-    }
+//     if (potionIndex === -1) {
+//       return `Potion ${potionName} is not in inventory!`;
+//     }
 
-    this.potions.splice(potionIndex, 1);
-  },
+//     this.potions.splice(potionIndex, 1);
+//   },
 
-  updatePotionName(oldName, newName) {
-    for (let i = 0; i < this.potions.length; i += 1) {
-      if (this.potions.name[i] === oldName){
-        this.potions.name[i] === newName;
-        break;
-         return `Potion ${oldName} is not in inventory!`;
-      }
-    }
-    this.potions.splice(potionIndex, 1, newName);
-      },
+//   updatePotionName(oldName, newName) {
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       if (this.potions.name[i] === oldName){
+//         this.potions.name[i] === newName;
+//         break;
+//          return `Potion ${oldName} is not in inventory!`;
+//       }
+//     }
+//     this.potions.splice(potionIndex, 1, newName);
+//       },
 
    
+//   },
+//   // Change code above this line
+// };
+
+// ----------------------------------------------------
+
+// CALLBACK
+
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSuccess, onError) {
+//     if (pizzaPalace.pizzas.includes(pizzaName)){
+//       return onSuccess(pizzaName);
+
+//     }
+//     return onError (`There is no pizza with a name ${pizzaName} in the assortment.`)
+//   },
+  
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Four meats", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Big Mike", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
+
+// -------------------------------------------------------------------------
+// FOREACH
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+// orderedItems.forEach(function (element) {
+//   console.log(orderedItems)
+//   totalPrice += element;
+// } )
+ 
+
+//   // Change code above this line
+//   return totalPrice;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
+// ---------------------------------------------------------------------------
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//   // Change code below this line
+// numbers.forEach(function (element) {
+//   if(element > value){
+//     filteredNumbers.push(element); 
+//   }
+// })
+ 
+
+//   // Change code above this line
+//   return filteredNumbers;
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+// console.log(filterArray([1, 2, 3, 4, 5], 5));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+
+// -------------------------------------------------------------------------
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+// firstArray.forEach(function (element){
+//   if(secondArray.includes(element)){
+//     commonElements.push(element)
+//   }
+// })
+ 
+
+//   return commonElements;
+//   // Change code above this line
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+
+// ------------------------------------------------------------------------
+
+// =>=>=>
+
+// function changeEven(numbers, value) {
+//   // Change code below this line
+//   const newArray = [];
+// numbers.forEach((number) =>{
+//   if (number % 2 === 0){
+//     newArray.push(number + value);
+//   } else {
+//  newArray.push(number);
+// }
+// })
+//  return  newArray;
+//   // Change code above this line
+// }
+
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+// console.log(changeEven([17, 24, 68, 31, 42], 100));
+
+// ------------------------------------------------------------------------
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "mysticism"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism", "adventure"],
+//   },
+// ];
+// // Change code below this line
+// const allGenres = books.flatMap(book => book.genres);
+// const uniqueGenres = allGenres.filter(
+//   (genre, index, arr) => arr.indexOF(genre) === index
+// );
+
+// console.log(allGenres);
+// console.log(uniqueGenres);
+
+// --------------------------------------------------------------------------
+[
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male",
+    age: 37
   },
-  // Change code above this line
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female",
+    age: 34
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male",
+    age: 24
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female",
+    age: 21
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male",
+    age: 27
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male",
+    age: 38
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female",
+    age: 39
+  }
+]
+const getFriends = (users) => {
+  const friendsList = users.flatMap(list => list.friends) 
+  console.log(friendsList)
 };
