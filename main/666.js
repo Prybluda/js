@@ -508,7 +508,85 @@
 // console.log(uniqueGenres);
 
 // --------------------------------------------------------------------------
-[
+// [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male",
+//     age: 37
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female",
+//     age: 34
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male",
+//     age: 24
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female",
+//     age: 21
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male",
+//     age: 27
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male",
+//     age: 38
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female",
+//     age: 39
+//   }
+// ]
+// const getFriends = (users) => {
+//   const friendsList = users.flatMap(list => list.friends) 
+//   console.log(friendsList)
+// };
+
+// ----------------------------------------------------------------
+const users =[
   {
     name: "Moore Hensley",
     email: "moorehensley@indexia.com",
@@ -516,8 +594,7 @@
     friends: ["Sharron Pace"],
     isActive: false,
     balance: 2811,
-    gender: "male",
-    age: 37
+    gender: "male"
   },
   {
     name: "Sharlene Bush",
@@ -526,8 +603,7 @@
     friends: ["Briana Decker", "Sharron Pace"],
     isActive: true,
     balance: 3821,
-    gender: "female",
-    age: 34
+    gender: "female"
   },
   {
     name: "Ross Vazquez",
@@ -536,8 +612,7 @@
     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
     isActive: false,
     balance: 3793,
-    gender: "male",
-    age: 24
+    gender: "male"
   },
   {
     name: "Elma Head",
@@ -546,28 +621,25 @@
     friends: ["Goldie Gentry", "Aisha Tran"],
     isActive: true,
     balance: 2278,
-    gender: "female",
-    age: 21
+    gender: "female"
   },
   {
     name: "Carey Barr",
     email: "careybarr@nurali.com",
     eyeColor: "blue",
-    friends: ["Jordan Sampson", "Eddie Strong"],
+    friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
     isActive: true,
     balance: 3951,
-    gender: "male",
-    age: 27
+    gender: "male"
   },
   {
     name: "Blackburn Dotson",
     email: "blackburndotson@furnigeer.com",
     eyeColor: "brown",
-    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
     isActive: false,
     balance: 1498,
-    gender: "male",
-    age: 38
+    gender: "male"
   },
   {
     name: "Sheree Anthony",
@@ -576,11 +648,16 @@
     friends: ["Goldie Gentry", "Briana Decker"],
     isActive: true,
     balance: 2764,
-    gender: "female",
-    age: 39
+    gender: "female"
   }
 ]
-const getFriends = (users) => {
-  const friendsList = users.flatMap(list => list.friends) 
-  console.log(friendsList)
+// Change code below this line
+const getNamesSortedByFriendCount = users => {
+  const userNames = users.map(user => user.name)
+  // .sort((a, b) => 
+  // a.friends.length - b.friends.length)
+ return userNames;
 };
+
+console.log(userNames)
+// Change code above this line
